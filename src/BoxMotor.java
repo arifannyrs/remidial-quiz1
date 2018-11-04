@@ -9,25 +9,27 @@
  * @author Arifannyrs
  */
 public class BoxMotor {
-    private String nama;
+    private String merk;
     private float tipe;
     public float jumlah;
-    private float harga;
-
-    public BoxMotor(String nama, float tipe, float jumlah, float harga) {
-        this.nama = nama;
+    public float harga;
+    
+    public BoxMotor(){   
+    }
+    
+    public BoxMotor(String merk, float tipe, float jumlah, float harga) {
+        this.merk = merk;
         this.tipe = tipe;
         this.jumlah = jumlah;
-        this.harga = harga;
-        
+        this.harga = harga;      
     }
 
     public String getNama() {
-        return nama;
+        return merk;
     }
 
     public void setNama(String nama) {
-        this.nama = nama;
+        this.merk = merk;
     }
 
     public float getTipe() {
@@ -54,7 +56,12 @@ public class BoxMotor {
         this.harga = harga;
     }
     
-    public float HargaTotal(){
-        return jumlah*harga;
-    } 
+    public String info(){
+        String info = "";
+        info +="Merk Box : " + this.merk + "\n";
+        info +="Tipe : " + this.tipe + "\n";
+        info +="Jumlah : " + this.jumlah + "\n";
+        info +="Harga : " + this.harga + "\n";
+        return info;
+    }
 }
